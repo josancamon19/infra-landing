@@ -143,16 +143,39 @@ h1 {
   line-height: 1.45;
 }
 
+.reach-out {
+  display: inline-block;
+  margin-top: 1rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  text-decoration: none;
+}
+
 .grants {
   border-top: 1px solid var(--ink);
 }
 
 .grants-header {
   display: flex;
+  gap: 1.5rem;
   align-items: center;
   justify-content: space-between;
   min-height: 3.4rem;
   border-bottom: 1px solid var(--line);
+}
+
+.grants-heading {
+  flex: 1;
+  text-transform: none;
+}
+
+.grants-heading .question {
+  color: var(--muted);
+}
+
+.grants-heading .grant-name {
+  color: var(--blue);
+  font-weight: 600;
 }
 
 .grants-header h2,
@@ -162,6 +185,7 @@ h1 {
 
 .status {
   display: flex;
+  flex-shrink: 0;
   gap: 0.5rem;
   align-items: center;
 }
@@ -316,7 +340,11 @@ h1 {
   }
 
   .grants-header {
+    flex-direction: column;
+    gap: 0.35rem;
+    align-items: flex-start;
     min-height: 2.9rem;
+    padding-block: 0.65rem;
   }
 
   .offer {
@@ -436,11 +464,21 @@ h1 {
                         Across data, compute, energy, inference, and the systems
                         still taking shape.
                     </p>
+                    <a class="reach-out" href="mailto:infra@base10.vc"
+                        >Reach out <span aria-hidden="true">→</span></a
+                    >
                 </section>
 
                 <section class="grants" aria-labelledby="grants-title">
                     <div class="grants-header">
-                        <h2 id="grants-title">Compute grants</h2>
+                        <h2 class="grants-heading" id="grants-title">
+                            <span class="question"
+                                >Not building a company yet?</span
+                            >
+                            <span class="grant-name"
+                                >Explore our compute grants</span
+                            >
+                        </h2>
                         <p class="status">
                             <span aria-hidden="true"></span>Applications open ·
                             5-minute form
